@@ -5,7 +5,7 @@ import PlanetComparison from './components/PlanetComparison';
 import LaunchLiveStream from './components/LaunchLiveStream';
 import { Menu, X, Rocket, Search } from 'lucide-react';
 
-const App: React.FC = () => {
+const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
