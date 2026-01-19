@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { CountDownTime } from '../types';
 import { Rocket, Timer } from 'lucide-react';
 
-const MissionCountdown: React.FC = () => {
+const MissionCountdown = () => {
   // Set target date to 3 days from now for demo purposes
-  const [targetDate] = useState<number>(() => {
+  const [targetDate] = useState(() => {
     const date = new Date();
     date.setDate(date.getDate() + 3);
     date.setHours(date.getHours() + 14);
     return date.getTime();
   });
 
-  const [timeLeft, setTimeLeft] = useState<CountDownTime>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -36,7 +35,7 @@ const MissionCountdown: React.FC = () => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  const TimeUnit: React.FC<{ value: number; label: string }> = ({ value, label }) => (
+  const TimeUnit = ({ value, label }) => (
     <div className="flex flex-col items-center mx-2 md:mx-6">
       <div className="relative group">
         <div className="absolute -inset-1 bg-gradient-to-r from-accent-cyan to-accent-purple rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
