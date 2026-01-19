@@ -1,8 +1,7 @@
 import React from 'react';
-import { NewsArticle } from '../types';
 import { ArrowRight, Star } from 'lucide-react';
 
-const mockNews: NewsArticle[] = [
+const mockNews = [
   {
     id: '1',
     title: 'James Webb Detects Water Vapor on K2-18b',
@@ -53,7 +52,7 @@ const mockNews: NewsArticle[] = [
   }
 ];
 
-const NewsCard: React.FC<{ article: NewsArticle }> = ({ article }) => (
+const NewsCard = ({ article }) => (
   <article className="group relative bg-space-800 border border-space-700 rounded-xl overflow-hidden hover:border-accent-cyan/50 transition-all duration-300 mission-card flex flex-col h-full">
     <div className="relative h-48 overflow-hidden">
       <img 
@@ -90,7 +89,7 @@ const NewsCard: React.FC<{ article: NewsArticle }> = ({ article }) => (
   </article>
 );
 
-const CosmosNewsFeed: React.FC = () => {
+const CosmosNewsFeed = () => {
   return (
     <section className="py-20 px-4 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-space-700 pb-6">
