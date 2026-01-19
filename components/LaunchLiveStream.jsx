@@ -1,7 +1,7 @@
 import React from 'react';
 import { Radio, Users, Signal } from 'lucide-react';
 
-const LaunchLiveStream: React.FC = () => {
+const LaunchLiveStream = () => {
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-space-900 to-space-800">
       <div className="max-w-7xl mx-auto">
