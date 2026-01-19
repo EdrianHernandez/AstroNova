@@ -1,8 +1,7 @@
 import React from 'react';
-import { PlanetData } from '../types';
 import { Info } from 'lucide-react';
 
-const planets: PlanetData[] = [
+const planets = [
   { name: 'Mercury', gravity: '3.7 m/s²', atmosphere: 'None (Trace)', diameter: '4,879 km', dayLength: '4,222 hrs', temp: '167°C' },
   { name: 'Venus', gravity: '8.87 m/s²', atmosphere: 'CO2, N2', diameter: '12,104 km', dayLength: '2,802 hrs', temp: '464°C' },
   { name: 'Earth', gravity: '9.81 m/s²', atmosphere: 'N2, O2', diameter: '12,742 km', dayLength: '24 hrs', temp: '15°C' },
@@ -11,7 +10,7 @@ const planets: PlanetData[] = [
   { name: 'Saturn', gravity: '10.44 m/s²', atmosphere: 'H2, He', diameter: '116,460 km', dayLength: '10.7 hrs', temp: '-140°C' },
 ];
 
-const PlanetComparison: React.FC = () => {
+const PlanetComparison = () => {
   return (
     <section className="bg-space-900 py-20 border-y border-space-800">
       <div className="max-w-7xl mx-auto px-4">
@@ -33,7 +32,7 @@ const PlanetComparison: React.FC = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-space-700">
-              {planets.map((planet, index) => (
+              {planets.map((planet) => (
                 <tr key={planet.name} className="group hover:bg-space-700/50 transition-colors duration-150">
                   <td className="p-6 font-bold text-white font-mono sticky left-0 bg-space-800/50 backdrop-blur-md group-hover:bg-space-700/80 group-hover:text-accent-cyan transition-colors border-r border-space-700/50">
                     {planet.name}
